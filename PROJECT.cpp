@@ -3,10 +3,16 @@
 using namespace std;
 //help legit// 
 //stuff to add
-//1. yung case 3 and 4
+//1. yung case 3 and 4 sa main menu
 //2. some other fail input things
-//3. yung buy again
+//3. yung buy again for some of the fails and end.
 //4. the prices
+//HEYYYYYYY WAIT COMBINE BREAD AND PASTRIES INTO ONE*
+//basically 1. Buy tapos 1. Bread 2. Pastries and so on. although magaging apat options sa main menu
+//*maybe
+//there are some infinite loops here lalo na kapag yung input mo is letter (since we ask for number)
+//the prices me not understand
+//maybe too many functions
 int BuyChoice, mochaCake, navi;
 float moneyBalance, totalAmount;
 char yesn;
@@ -51,15 +57,25 @@ void cakerMochs()
 		int cakeSlice;
 		cout<<"How many slices would you like to buy?: ";
 		cin>>cakeSlice;
-		moneyBalance += cakeSlice * 30; // 5 yung price ng slice
-		cout<<"Your Total is: "<<moneyBalance;
+		moneyBalance += cakeSlice * 30;
+		cout<<"Would you like to buy again:(Y/N) ";
+		cin>>yesn;
+		if (yesn == 'Y' || yesn == 'y'){
+			cakerMochs(); //Supposedly dapat option to go to Bread section or Pastry section pero they not declared??
+		}
+		else if (yesn == 'N' || yesn == 'n'){
+			cout<<"Your current Total is: "<<moneyBalance;
+		}
+		else {
+			cout<<"Invalid Input";
+		}
 		break;
 	case 2:
 		int wholeCake;
 		cout<<"How many Mocha Cake would you like to buy?: ";
 		cin>>wholeCake;
 		moneyBalance += wholeCake * 180;
-		cout<<"Your total is "<<moneyBalance;
+		cout<<"Your current total is "<<moneyBalance;
 		break;
         }
 	}
@@ -70,7 +86,7 @@ void cookieQuants()
 	cout<<"How many Cookies would you like to buy?: ";
 	cin>>cookieQuanti;
 	moneyBalance += cookieQuanti * 18; 
-	cout<<moneyBalance;
+	cout<<"Your current total is: "<<moneyBalance;
 }
 
 void pastryChoices()
@@ -106,15 +122,15 @@ void wlb ()
 			int wlbSlices;
 			cout<<"How many slices would you like to buy?: ";
 			cin>>wlbSlices;
-			moneyBalance += wlbSlices * 11; //CHANGE PRICE* *maybe
-			cout<<"Your Total is: "<<moneyBalance;
+			moneyBalance += wlbSlices * 11;
+			cout<<"Your current Total is: "<<moneyBalance;
 			break;
 			case 2:
 			int wholeLoaf;
 			cout<<"How many Wheat Loaf Bread would you like to buy?: ";
 			cin>>wholeLoaf;
-			moneyBalance += wholeLoaf * 5; //CHANGE PRICE
-			cout<<"Your Total is: "<<moneyBalance; //PAY THINGY
+			moneyBalance += wholeLoaf * 5; 
+			cout<<"Your current Total is: "<<moneyBalance; //PAY THINGY
 			break;
 			}
 }
@@ -172,6 +188,9 @@ void buyChoices()
 		cout<<"Try Again\n";
 		buyChoices();
 	}
+	else{
+
+	
 	switch(BuyChoice)
 	{
 		case 1: 
@@ -190,6 +209,7 @@ void buyChoices()
 		case 5:
 		cout<<"Thank You!. Please Come Again.";
 		exit(0);
+	}
 	}
 }
 
