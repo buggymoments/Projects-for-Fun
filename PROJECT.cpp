@@ -7,6 +7,8 @@ using namespace std;
 //2. some other fail input things
 //3. yung buy again for some of the fails and end.
 //4. the prices
+//Combine na lng bread and pastries to buy?
+//1. Buy then subcat, 1. BRead 2. Pastries etc., 
 //there are some infinite loops here lalo na kapag yung input mo is letter (since we ask for number)
 //the prices me not understand and the arrays basically
 //maybe too many functions
