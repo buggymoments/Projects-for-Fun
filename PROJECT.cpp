@@ -2,16 +2,13 @@
 #include <cstdlib>
 using namespace std;
 //help legit// 
-//stuff to add
+//stuff to still add
 //1. yung case 3 and 4 sa main menu
 //2. some other fail input things
 //3. yung buy again for some of the fails and end.
 //4. the prices
-//HEYYYYYYY WAIT COMBINE BREAD AND PASTRIES INTO ONE*
-//basically 1. Buy tapos 1. Bread 2. Pastries and so on. although magaging apat options sa main menu
-//*maybe
 //there are some infinite loops here lalo na kapag yung input mo is letter (since we ask for number)
-//the prices me not understand
+//the prices me not understand and the arrays basically
 //maybe too many functions
 int BuyChoice, mochaCake, navi;
 float moneyBalance, totalAmount;
@@ -62,6 +59,7 @@ void cakerMochs()
 		cin>>yesn;
 		if (yesn == 'Y' || yesn == 'y'){
 			cakerMochs(); //Supposedly dapat option to go to Bread section or Pastry section pero they not declared??
+			//Balik na lng sa menu? which is buyChoices();
 		}
 		else if (yesn == 'N' || yesn == 'n'){
 			cout<<"Your current Total is: "<<moneyBalance;
